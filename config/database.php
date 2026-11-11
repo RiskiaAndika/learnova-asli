@@ -1,8 +1,8 @@
 ﻿<?php
-$host = '${{MySQL.MYSQLHOST}}';
-$dbname = '${{MySQL.MYSQLDATABASE}}';
-$username = '${{MySQL.MYSQLUSER}}';
-$password = '${{MySQL.MYSQLPASSWORD}}';
+$host = 'monorail.proxy.rlwy.net';
+$dbname = 'railway';
+$username = 'root';
+$password = 'gUIIUJpfBkDFrGuuADkzpzrovlFJBEYo';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password, [
