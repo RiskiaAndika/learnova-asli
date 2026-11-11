@@ -6,8 +6,10 @@ RUN docker-php-ext-install pdo pdo_mysql
 # Aktifkan mod_rewrite
 RUN a2enmod rewrite
 
-# Nonaktifkan MPM event/worker, pastikan hanya mpm_prefork yang aktif
-RUN a2dismod mpm_event mpm_worker 2>/dev/null; a2enmod mpm_prefork
+# FIX MPM: Hapus SEMUA MPM, lalu aktifkan hanya prefork
+RUN rm -f /etc/apache2/mods-enabled/mpm_*.conf /etc/apache2/mods-enabled/mpm_*.load \
+    && ln -sf /etc/apache2/mods-available/mpm_prefork.conf /etc/apache2/mods-enabled/mpm_prefork.conf \
+    && ln -sf /etc/apache2/mods-available/mpm_prefork.load /etc/apache2/mods-enabled/mpm_prefork.load
 
 # Izinkan .htaccess override
 RUN sed -i '/<Directory \/var\/www\/>/,/<\/Directory>/ s/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
