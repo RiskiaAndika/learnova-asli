@@ -1,5 +1,5 @@
 ﻿<?php
-$host = 'monorail.proxy.rlwy.net';
+$host = 'monorail.proxy.rlwy.net:46177';
 $dbname = 'railway';
 $username = 'root';
 $password = 'gUIIUJpfBkDFrGuuADkzpzrovlFJBEYo';
