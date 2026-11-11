@@ -1,8 +1,8 @@
 ﻿<?php
-$host = 'localhost';
-$dbname = 'learnova';
-$username = 'root';
-$password = '';
+$host = '${{MySQL.MYSQLHOST}}';
+$dbname = '${{MySQL.MYSQLDATABASE}}';
+$username = '${{MySQL.MYSQLUSER}}';
+$password = '${{MySQL.MYSQLPASSWORD}}';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password, [
