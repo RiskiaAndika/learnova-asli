@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Profil • Learnova</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <script src="../../assets/js/layout.js" defer></script>
+</head>
+
+<body
+    data-role="peserta"
+    data-page="profil"
+    data-title="Profil Saya"
+>
+
+<div id="pageContent">
+
+    <div class="card profile-card">
+
+        <div class="profile-header">
+            <div class="avatar profile-avatar">P</div>
+
+            <div>
+                <h2>Profil Pengguna</h2>
+                <p class="muted">
+                    Kelola informasi akun Learnova kamu.
+                </p>
+            </div>
+        </div>
+
+        <hr>
+
+        <form id="profileForm">
+
+            <label for="profileName">Nama lengkap</label>
+            <input
+                type="text"
+                id="profileName"
+                name="name"
+                placeholder="Nama lengkap"
+                required
+            >
+
+            <label for="profileEmail">Email</label>
+            <input
+                type="email"
+                id="profileEmail"
+                name="email"
+                placeholder="nama@email.com"
+                required
+            >
+
+            <label for="profileRole">Peran akun</label>
+            <input
+                type="text"
+                id="profileRole"
+                value="Murid"
+                readonly
+            >
+
+            <div class="profile-actions">
+                <button type="submit" class="btn">
+                    Simpan Perubahan
+                </button>
+            </div>
+
+            <p id="profileMessage" class="message"></p>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>

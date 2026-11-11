@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Seminar • Learnova</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/platform.css">
+    <script src="../../assets/js/layout.js" defer></script>
+    <script src="../../assets/js/academy-full.js" defer></script>
+  </head>
+  <body data-role="peserta" data-page="academy" data-title="Seminar">
+    <div id="pageContent">
+      <div class="platform-intro">
+        <div>
+          <p>Temukan seminar baru dan lanjutkan perjalanan belajarmu.</p>
+        </div>
+        <span class="platform-count" id="academyCount">0 seminar</span>
+      </div>
+
+      <div class="platform-actions" style="margin-bottom:18px">
+        <button class="btn" data-filter="all">Semua seminar</button>
+        <button class="btn secondary" data-filter="joined">seminar saya</button>
+        <button class="btn secondary" data-filter="available">Belum diikuti</button>
+      </div>
+
+      <div class="platform-grid" id="academyList">
+        <article class="card platform-empty">Memuat seminarmu...</article>
+      </div>
+
+      <div class="card platform-form" id="paymentBox" hidden>
+        <h2>Pembayaran webinar</h2>
+        <p id="paymentText"></p>
+        <p class="platform-message">Mode demo: tombol berikut hanya mensimulasikan pembayaran berhasil. Belum ada uang sungguhan yang diproses.</p>
+        <button class="btn" id="demoPay">Konfirmasi pembayaran demo</button>
+        <button class="btn secondary" id="cancelPay">Tutup</button>
+      </div>
+    </div>
+  </body>
+</html>

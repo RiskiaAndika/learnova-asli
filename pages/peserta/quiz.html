@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Quiz • Learnova</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/platform.css">
+    <link rel="stylesheet" href="../../assets/css/student-quiz-timed.css">
+    <script src="../../assets/js/layout.js" defer></script>
+    <script src="../../assets/js/student-quizzes.js" defer></script>
+  </head>
+  <body data-role="peserta" data-page="quiz" data-title="Quiz">
+    <div id="pageContent">
+      <div class="platform-intro">
+        <p>Quiz dari kelas yang sudah kamu ikuti. Setiap jawaban benar mendapat 10 poin reward.</p>
+      </div>
+
+      <div id="quizPanel" class="card timed-quiz-panel" hidden>
+        <div class="timed-quiz-top">
+          <div>
+            <span class="quiz-kicker">SEDANG MENGERJAKAN</span>
+            <h2 id="quizTitle">Quiz</h2>
+            <p id="quizDescription"></p>
+          </div>
+          <button class="btn secondary" id="closeQuiz" type="button">Keluar</button>
+        </div>
+        <div id="questionArea"></div>
+        <div id="quizResult"></div>
+      </div>
+
+      <div class="platform-intro">
+        <div>
+          <h2>Quiz tersedia</h2>
+        </div>
+        <span class="platform-count" id="quizCount">0 Quiz</span>
+      </div>
+
+      <div class="platform-grid" id="studentQuizList">
+        <article class="card platform-empty">Memuat Quiz...</article>
+      </div>
+    </div>
+  </body>
+</html>

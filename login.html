@@ -1,0 +1,62 @@
+﻿<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Masuk • Learnova</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <div class="auth">
+      <aside class="auth-side">
+        <a class="brand" href="index.html">
+        <img src="assets/img/Profil Learnova.png" alt="Learnova">
+        Learnova<span>.</span>
+      </a>
+        <div>
+          <h2>Belajar, berkembang, raih pencapaianmu.</h2>
+          <p>Murid mengikuti seminar dan mengumpulkan poin. Pengajar membuat seminar, jadwal, dan kuis. Satu platform untuk keduanya.</p>
+        </div>
+        <small>© 2026 Learnova</small>
+      </aside>
+      <main class="auth-main">
+        <section class="panel">
+          <a class="brand mobile-brand" href="index.html">
+            <img src="assets/img/Profil Learnova.png" alt="Logo Learnova">
+              Learnova<span>.</span>
+          </a>
+          <h1>Selamat datang kembali</h1>
+          <p class="muted" style="margin:0">Masuk ke akun Learnova kamu.</p>
+          <div class="role-tabs" role="tablist" aria-label="Pilih peran">
+            <button type="button" class="role-tab" data-role="peserta" role="tab">
+              <svg class="i" viewBox="0 0 24 24">
+                <path d="M22 10 12 5 2 10l10 5z"/>
+                <path d="M6 12v5c3 2 9 2 12 0v-5"/>
+              </svg>
+              Peserta
+            </button>
+            <button type="button" class="role-tab" data-role="penyelenggara" role="tab">
+              <svg class="i" viewBox="0 0 24 24">
+                <rect x="3" y="4" width="18" height="13" rx="2"/>
+                <path d="M8 21h8M12 17v4"/>
+              </svg>
+              Penyelenggara
+            </button>
+          </div>
+          <p class="role-hint" id="roleHint"></p>
+          <form id="loginForm">
+            <input type="hidden" name="role" value="peserta">
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" required placeholder="nama@email.com" autocomplete="email">
+            <label for="password">Password</label>
+            <input id="password" type="password" name="password" required placeholder="Password" autocomplete="current-password">
+            <button class="btn full">Masuk</button>
+            <p class="message" role="alert"></p>
+          </form>
+          <p class="muted center">Belum punya akun? <a id="switchLink" href="register.html">Daftar</a></p>
+        </section>
+      </main>
+    </div>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+﻿<!doctype html>
+<html lang="utf-8">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Kelola Seminar • Learnova</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/platform.css">
+    <script src="../../assets/js/layout.js" defer></script>
+    <script src="../../assets/js/teacher-classes.js" defer></script>
+  </head>
+  <body data-role="penyelenggara" data-page="kelas" data-title="Kelola Seminar">
+    <div id="pageContent">
+      <div class="platform-intro">
+        <div>
+          <p>Atur seminar, harga, jadwal, dan publikasi webinarmu.</p>
+        </div>
+        <button class="btn" id="showForm">＋ Tambah Seminar</button>
+      </div>
+      <form class="card platform-form" id="classForm" hidden>
+        <h2 id="formTitle">Buat seminar baru</h2>
+        <div class="platform-form-row">
+          <div class="field">
+            <label>Nama seminar</label>
+            <input name="title" required maxlength="150" placeholder="Contoh: Web Development Dasar">
+          </div>
+          <div class="field">
+            <label>Jadwal seminar</label>
+            <input name="schedule" type="datetime-local">
+          </div>
+        </div>
+        <div class="field">
+          <label>Deskripsi</label>
+          <textarea name="description" rows="3" placeholder="Materi dan tujuan Seminar..."></textarea>
+        </div>
+        <div class="platform-form-row">
+          <div class="field">
+            <label>Jenis seminar</label>
+            <select name="access_type" id="accessType">
+              <option value="free">Gratis</option>
+              <option value="paid">Berbayar</option>
+            </select>
+          </div>
+          <div class="field" id="priceField" hidden>
+            <label>Harga (Rupiah)</label>
+            <input name="price" type="number" min="1" step="1000" placeholder="150000">
+          </div>
+        </div>
+        <div class="platform-actions">
+          <button class="btn" type="submit" id="saveClass">Simpan seminar</button>
+          <button class="btn secondary" type="button" id="cancelForm">Batal</button>
+        </div>
+        <p class="platform-message" id="formMessage"></p>
+      </form>
+      <div class="platform-intro">
+        <div>
+          <h2>seminar Saya</h2>
+          <p>Draft belum terlihat oleh murid. Publikasikan agar seminar muncul di Seminar.</p>
+        </div>
+        <span class="platform-count" id="classCount">0 seminar</span>
+      </div>
+      <div class="platform-grid" id="classList">
+        <article class="card platform-empty">Memuat seminar...</article>
+      </div>
+    </div>
+  </body>
+</html>

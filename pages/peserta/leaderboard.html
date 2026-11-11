@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Leaderboard • Learnova</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/platform.css">
+    <script src="../../assets/js/layout.js" defer></script>
+    <script src="../../assets/js/leaderboard.js" defer></script>
+  </head>
+  <body data-role="peserta" data-page="leaderboard" data-title="Leaderboard">
+    <div id="pageContent">
+      <div class="platform-intro">
+        <div>
+          <p>Peringkat dihitung dari poin yang kamu kumpulkan selama bulan berjalan.</p>
+        </div>
+        <span class="pill green" id="monthLabel">Bulan ini</span>
+      </div>
+
+      <div class="platform-grid" style="margin-bottom:18px">
+        <article class="card platform-card">
+          <small class="rank-sub">Poin bulan ini</small>
+          <h2 id="myPoints">0</h2>
+        </article>
+        <article class="card platform-card">
+          <small class="rank-sub">Peringkatmu</small>
+          <h2 id="myRank">Belum masuk 50 besar</h2>
+        </article>
+        <article class="card platform-card">
+          <small class="rank-sub">Bonus peringkat</small>
+          <p>#1 200 poin · #2 150 poin · #3 100 poin · #4–50 50 poin</p>
+        </article>
+      </div>
+
+      <div class="card platform-form">
+        <div class="platform-intro">
+          <div>
+            <h2>Top 50 Murid</h2>
+            <p>Leaderboard direset otomatis setiap awal bulan.</p>
+          </div>
+        </div>
+        <div id="leaderboardList">Memuat peringkat...</div>
+      </div>
+    </div>
+  </body>
+</html>

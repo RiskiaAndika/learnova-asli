@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Kelola Kuis • Learnova</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/platform.css">
+    <script src="../../assets/js/layout.js" defer></script>
+    <script src="../../assets/js/teacher-quizzes.js" defer></script>
+  </head>
+  <body data-role="penyelenggara" data-page="kuis" data-title="Kelola Quiz">
+    <div id="pageContent">
+      <div class="platform-intro">
+        <div>
+          <p>Buat kuis untuk seminar yang kamu kelola. Setiap jawaban benar bernilai 10 poin.</p>
+        </div>
+        <button class="btn" id="showQuizForm">＋ Buat Kuis</button>
+      </div>
+
+      <form class="card platform-form" id="quizForm" hidden>
+        <h2>Buat Quiz baru</h2>
+        <div class="platform-form-row">
+          <div class="field">
+            <label>Seminar</label>
+            <select name="class_id" id="quizClass" required></select>
+          </div>
+          <div class="field">
+            <label>Judul Quiz</label>
+            <input name="title" required placeholder="Contoh: Kuis HTML Dasar">
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Deskripsi</label>
+          <textarea name="description" rows="2"></textarea>
+        </div>
+
+        <div id="questionList"></div>
+
+        <div class="platform-actions">
+          <button class="btn secondary" type="button" id="addQuestion">＋ Tambah soal</button>
+          <button class="btn" type="submit" id="saveQuiz">Simpan Quiz</button>
+          <button class="btn secondary" type="button" id="cancelQuiz">Batal</button>
+        </div>
+
+        <p class="platform-message" id="quizMessage"></p>
+      </form>
+
+      <div class="platform-intro">
+        <div>
+          <h2>Quiz Saya</h2>
+          <p>Publikasikan quiz agar murid yang sudah bergabung dapat mengerjakannya.</p>
+        </div>
+        <span class="platform-count" id="quizCount">0 quiz</span>
+      </div>
+
+      <div class="platform-grid" id="quizList">
+        <article class="card platform-empty">Memuat quiz...</article>
+      </div>
+    </div>
+  </body>
+</html>

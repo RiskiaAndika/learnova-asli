@@ -1,0 +1,303 @@
+
+.platform-intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin: 0 0 22px;
+}
+
+.platform-intro p {
+    margin: 4px 0;
+    color: var(--muted);
+}
+
+.platform-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+}
+
+.platform-card {
+    padding: 20px;
+}
+
+.platform-card h3 {
+    margin: 10px 0 7px;
+    font-size: 18px;
+}
+
+.platform-card p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.platform-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.pill {
+    display: inline-flex;
+    padding: 6px 10px;
+    border-radius: 30px;
+    background: var(--soft);
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.pill.green {
+    background: #e8f8ef;
+    color: #168653;
+}
+
+.pill.orange {
+    background: #fff2df;
+    color: #a65a00;
+}
+
+.platform-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.platform-actions .btn {
+    padding: 9px 13px;
+    font-size: 12px;
+}
+
+.btn.secondary {
+    background: var(--soft);
+    color: var(--primary);
+    box-shadow: none;
+}
+
+.btn.danger {
+    background: #dc3545;
+}
+
+.platform-form {
+    padding: 22px;
+    margin-bottom: 22px;
+}
+
+.platform-form h2 {
+    margin: 0 0 6px;
+    font-size: 20px;
+}
+
+.platform-form .field {
+    margin-top: 14px;
+}
+
+.platform-form label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 13px;
+    font-weight: 650;
+}
+
+.platform-form input,
+.platform-form textarea,
+.platform-form select,
+.platform-form .field input,
+.platform-form .field textarea,
+.platform-form .field select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--surface);
+    color: var(--ink);
+    font: inherit;
+}
+
+.platform-form textarea {
+    resize: vertical;
+}
+
+.platform-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.platform-count {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.platform-empty,
+.platform-error {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 36px 20px;
+}
+
+.platform-empty h3 {
+    margin: 8px 0;
+}
+
+.platform-empty p {
+    max-width: 450px;
+    margin: 0 auto;
+    color: var(--muted);
+}
+
+.platform-message {
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+.platform-message.error {
+    color: #d33;
+}
+
+.platform-message.success {
+    color: #168653;
+}
+
+.platform-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.platform-table th,
+.platform-table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+    font-size: 13px;
+}
+
+.platform-table th {
+    color: var(--muted);
+    font-weight: 650;
+}
+
+.quiz-question {
+    padding: 18px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    margin: 14px 0;
+}
+
+.quiz-question h4 {
+    margin: 0 0 12px;
+}
+
+.quiz-option {
+    display: flex;
+    gap: 9px;
+    align-items: flex-start;
+    padding: 9px 10px;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.quiz-option:hover {
+    background: var(--soft);
+}
+
+.quiz-option input {
+    margin-top: 4px;
+}
+
+.rank-row {
+    display: grid;
+    grid-template-columns: 48px 1fr auto;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 10px;
+    border-bottom: 1px solid var(--line);
+}
+
+.rank-number {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--soft);
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.rank-row:nth-child(1) .rank-number {
+    background: #fff0b8;
+    color: #966300;
+}
+
+.rank-row:nth-child(2) .rank-number {
+    background: #e9edf3;
+    color: #5c6675;
+}
+
+.rank-row:nth-child(3) .rank-number {
+    background: #f8e1cf;
+    color: #9a5425;
+}
+
+.rank-name {
+    font-weight: 700;
+}
+
+.rank-sub {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+.voucher-code {
+    padding: 10px 14px;
+    border: 1px dashed var(--primary);
+    border-radius: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--primary);
+    display: inline-block;
+}
+
+.balance-card {
+    background: linear-gradient(120deg, #155eef, #4338ca);
+    color: white;
+    padding: 22px;
+    border-radius: 18px;
+    margin-bottom: 22px;
+}
+
+.balance-card small {
+    opacity: 0.85;
+}
+
+.balance-card strong {
+    display: block;
+    font-size: 32px;
+    margin-top: 5px;
+}
+
+@media (max-width: 650px) {
+    .platform-intro,
+    .platform-form-row {
+        display: block;
+    }
+
+    .platform-intro .btn {
+        margin-top: 12px;
+    }
+
+    .platform-table {
+        min-width: 580px;
+    }
+
+    .table-wrap {
+        overflow: auto;
+    }
+}
