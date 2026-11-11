@@ -3,7 +3,7 @@ $host = 'monorail.proxy.rlwy.net';
 $port = '46177';
 $dbname = 'railway';
 $username = 'root';
-$password = '...';
+$password = 'gUIIUJpfBkDFrGuuADkzpzrovlFJBEYo';
 
 try {
     $pdo = new PDO("mysql:host=$host;port=$port;dbname=$dbname;charset=utf8mb4", $username, $password, [
